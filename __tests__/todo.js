@@ -5,7 +5,7 @@ const today = new Date().toLocaleDateString("en-CA");
 describe("TODO test suite", () => {
   beforeAll(() => {
     add({
-      title: "Charge Device",
+      title: "Go to college",
       dueDate: today,
       completed: true,
     });
@@ -13,7 +13,7 @@ describe("TODO test suite", () => {
   test("Add task", () => {
     let lengthBefore = all.length;
     add({
-      title: "Hit Gym",
+      title: "Visit pharmacy",
       dueDate: today,
       completed: false,
     });
@@ -30,7 +30,7 @@ describe("TODO test suite", () => {
     prev_date.setDate(prev_date.getDate() - 1);
     let yesterday = prev_date.toLocaleDateString("en-CA");
     add({
-      title: "Update System",
+      title: "Buy books",
       dueDate: yesterday,
       completed: false,
     });
@@ -39,7 +39,7 @@ describe("TODO test suite", () => {
   test("Due today tasks", () => {
     const todayItems = dueToday();
     add({
-      title: "Clean your laptop",
+      title: "clean house",
       dueDate: today,
       completed: false,
     });
@@ -51,7 +51,7 @@ describe("TODO test suite", () => {
     next_date.setDate(next_date.getDate() + 1);
     let tomorrow = next_date.toLocaleDateString("en-CA");
     add({
-      title: "Pay current bill",
+      title: "Cook breakfast",
       dueDate: tomorrow,
       completed: false,
     });
